@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <!-- PANTALLA DE BIENVENIDA -->
+        <section id="pantalla-inicio" class="pantalla">
+
+            <div class="logo">⚗️</div>
+
+            <h1>CHEMISTRY <span>CHALLENGE</span></h1>
+
+            <p class="subtitulo">
+                Aprende química. Supera desafíos. Demuestra lo que sabes.
+            </p>
+
+            <div class="botones-inicio">
+
+                <button onclick="iniciarJuego()">
+                    🎮 JUGAR
+                </button>
+
+                <button onclick="mostrarCompetencia()">
+                    🏆 COMPETIR
+                </button>
+
+                <button onclick="mostrarInstrucciones()">
+                    📖 INSTRUCCIONES
+                </button>
+
+            </div>
+
+            <p class="pie">
+                PROYECTO EDUCATIVO DE QUÍMICA | TIC
+            </p>
+
+        </section>
+
+        <!-- PANTALLA DE INSTRUCCIONES -->
+        <section id="pantalla-instrucciones" class="pantalla oculto">
+
+            <h2>📖 ¿CÓMO JUGAR?</h2>
+
+            <p>1. Selecciona tu nivel de dificultad.</p>
+            <p>2. Responde las preguntas de química.</p>
+            <p>3. Obtén puntos por cada respuesta correcta.</p>
+            <p>4. Aprende con la retroalimentación inmediata.</p>
+            <p>5. Intenta conseguir la mayor puntuación.</p>
+
+            <button onclick="volverInicio()">VOLVER</button>
+
+        </section>
+
+       <!-- PANTALLA DE COMPETENCIA -->
+<section id="pantalla-competencia" class="pantalla oculto">
+
+    <h2>🏆 MODO COMPETITIVO</h2>
+
+    <p>Ingresa un alias para participar.</p>
+
+    <input type="text" id="alias" placeholder="Tu alias">
+<input type="text" id="codigoReto" placeholder="Código del reto">
+
+    <button onclick="registrarAlias()">CONTINUAR</button>
+
+    <button onclick="volverInicio()">VOLVER</button>
+
+</section>
+<section id="pantalla-niveles" class="pantalla oculto">
+
+    <h2>🧪 SELECCIONA TU NIVEL</h2>
+
+    <p>Elige tu dificultad.</p>
+
+    <div class="botones-inicio">
+
+        <button onclick="seleccionarNivel('Principiante')">
+            🟢 PRINCIPIANTE
+        </button>
+
+        <button onclick="seleccionarNivel('Medio')">
+            🔵 NIVEL MEDIO
+        </button>
+
+        <button onclick="volverInicio()">
+            VOLVER
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
