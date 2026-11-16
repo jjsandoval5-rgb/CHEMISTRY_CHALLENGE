@@ -431,6 +431,7 @@ function seleccionarNivel(nivel) {
 
     preguntaActual = 0;
     puntuacion = 0;
+    tiempoInicio = Date.now();
 
     mostrarPregunta();
 }
