@@ -365,12 +365,752 @@ const preguntas = [
             "La agitación no elimina el soluto.",
             "La masa del sólido no cambia por agitarlo."
         ]
-    }
+    },
 
+    // ===== PREGUNTAS ADICIONALES: NIVEL MEDIO =====
+
+    // UNIDADES FÍSICAS DE CONCENTRACIÓN
+
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué representa el porcentaje masa en masa (% m/m)?",
+        opciones: [
+            "Gramos de soluto por cada 100 g de solución",
+            "Gramos de solvente por litro",
+            "Moles de soluto por litro",
+            "Mililitros de soluto por 100 g de solución"
+        ],
+        correcta: 0,
+        explicacion: "El porcentaje masa en masa indica los gramos de soluto presentes en 100 gramos de solución.",
+        errores: [
+            "Correcto: representa gramos de soluto por cada 100 g de solución.",
+            "Esa expresión no corresponde al porcentaje masa en masa.",
+            "Los moles por litro corresponden a la molaridad.",
+            "Esta opción mezcla unidades de masa y volumen."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué significa una solución al 10 % m/v?",
+        opciones: [
+            "10 g de soluto en 100 mL de solución",
+            "10 mL de soluto en 100 g de solución",
+            "10 g de solvente en 100 mL",
+            "10 moles en 100 litros"
+        ],
+        correcta: 0,
+        explicacion: "El porcentaje masa en volumen expresa gramos de soluto por cada 100 mL de solución.",
+        errores: [
+            "Correcto: contiene 10 gramos de soluto por cada 100 mL de solución.",
+            "Esta opción corresponde a una combinación diferente de unidades.",
+            "Se refiere al solvente, no al soluto.",
+            "No corresponde al porcentaje masa en volumen."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué indica el porcentaje volumen en volumen (% v/v)?",
+        opciones: [
+            "Gramos de soluto por litro",
+            "Mililitros de soluto por cada 100 mL de solución",
+            "Moles de soluto por kilogramo",
+            "Gramos de solvente por 100 mL"
+        ],
+        correcta: 1,
+        explicacion: "El porcentaje volumen en volumen expresa el volumen de soluto en 100 unidades de volumen de solución.",
+        errores: [
+            "Esta expresión no corresponde al porcentaje volumen en volumen.",
+            "Correcto: representa mL de soluto por cada 100 mL de solución.",
+            "Los moles por kilogramo corresponden a la molalidad.",
+            "El porcentaje v/v considera el volumen del soluto."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué unidad se utiliza comúnmente para expresar la concentración en partes por millón (ppm)?",
+        opciones: [
+            "Partes de soluto por un millón de partes de solución",
+            "Moles por litro",
+            "Gramos por mol",
+            "Litros por kilogramo"
+        ],
+        correcta: 0,
+        explicacion: "Las ppm expresan una parte de soluto por cada millón de partes de solución, usando unidades compatibles.",
+        errores: [
+            "Correcto: esa es la definición de partes por millón.",
+            "Esta unidad corresponde a la molaridad.",
+            "Gramos por mol es una unidad de masa molar.",
+            "No es la definición de ppm."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "Una solución contiene 20 g de sal en 100 g de solución. ¿Cuál es su porcentaje m/m?",
+        opciones: ["10 %", "20 %", "30 %", "50 %"],
+        correcta: 1,
+        explicacion: "Se divide la masa del soluto para la masa de solución y se multiplica por 100: (20/100) × 100 = 20 %.",
+        errores: [
+            "El resultado correcto es 20 %.",
+            "Correcto: la solución tiene 20 % m/m.",
+            "Se debe utilizar la masa de soluto y la masa total de solución.",
+            "El porcentaje no corresponde a la mitad de la solución."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué información se necesita para calcular el porcentaje m/v?",
+        opciones: [
+            "Masa del soluto y volumen de la solución",
+            "Moles y kilogramos de solvente",
+            "Volumen del soluto y masa del solvente",
+            "Temperatura y presión"
+        ],
+        correcta: 0,
+        explicacion: "Para calcular el porcentaje m/v se necesita la masa del soluto y el volumen total de la solución.",
+        errores: [
+            "Correcto: se utilizan gramos de soluto y mL de solución.",
+            "Esos datos se relacionan con otras unidades de concentración.",
+            "No corresponde a la definición de porcentaje m/v.",
+            "La temperatura y la presión no son los datos de esta fórmula."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Concentración de soluciones",
+        pregunta: "¿Qué caracteriza a una solución diluida?",
+        opciones: [
+            "Tiene poca cantidad de soluto en relación con la solución",
+            "Contiene únicamente soluto",
+            "Siempre está saturada",
+            "No contiene solvente"
+        ],
+        correcta: 0,
+        explicacion: "Una solución diluida tiene una concentración relativamente baja de soluto.",
+        errores: [
+            "Correcto: contiene una proporción relativamente pequeña de soluto.",
+            "Una solución también necesita un solvente.",
+            "Una solución diluida no necesariamente está saturada.",
+            "El solvente forma parte de la solución."
+        ]
+    },
+
+    // UNIDADES QUÍMICAS DE CONCENTRACIÓN
+
+    {
+        nivel: "Medio",
+        tema: "Molaridad",
+        pregunta: "¿Qué es la molaridad?",
+        opciones: [
+            "Moles de soluto por litro de solución",
+            "Gramos de soluto por kilogramo de solución",
+            "Moles de solvente por litro",
+            "Litros de soluto por mol"
+        ],
+        correcta: 0,
+        explicacion: "La molaridad expresa la cantidad de moles de soluto presentes en un litro de solución.",
+        errores: [
+            "Correcto: esa es la definición de molaridad.",
+            "La molaridad utiliza moles y litros de solución.",
+            "Se considera la cantidad de soluto.",
+            "No corresponde a la definición de molaridad."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Molaridad",
+        pregunta: "¿Cuál es la unidad de la molaridad?",
+        opciones: ["g/mL", "mol/L", "kg/mol", "mL/g"],
+        correcta: 1,
+        explicacion: "La molaridad se expresa en moles por litro, también representada como M.",
+        errores: [
+            "g/mL representa una relación de masa y volumen.",
+            "Correcto: mol/L es la unidad de molaridad.",
+            "kg/mol no representa molaridad.",
+            "mL/g tampoco corresponde a esta unidad."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Molaridad",
+        pregunta: "¿Cuántos moles de soluto hay en 2 litros de una solución 3 M?",
+        opciones: ["1,5 mol", "3 mol", "6 mol", "9 mol"],
+        correcta: 2,
+        explicacion: "Se multiplica la molaridad por el volumen en litros: 3 mol/L × 2 L = 6 mol.",
+        errores: [
+            "Se debe multiplicar la molaridad por el volumen.",
+            "Este valor no considera los dos litros de solución.",
+            "Correcto: hay 6 moles de soluto.",
+            "El resultado correcto se obtiene multiplicando 3 por 2."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Molalidad",
+        pregunta: "¿Qué representa la molalidad?",
+        opciones: [
+            "Moles de soluto por kilogramo de solvente",
+            "Moles de soluto por litro de solución",
+            "Gramos de soluto por litro",
+            "Moles de solvente por kilogramo de solución"
+        ],
+        correcta: 0,
+        explicacion: "La molalidad relaciona los moles de soluto con los kilogramos de solvente.",
+        errores: [
+            "Correcto: esa es la definición de molalidad.",
+            "Esta definición corresponde a la molaridad.",
+            "Esta relación no representa la molalidad.",
+            "Se utilizan los moles del soluto y la masa del solvente."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Molalidad",
+        pregunta: "¿Cuál es la unidad habitual de la molalidad?",
+        opciones: ["mol/L", "mol/kg", "g/L", "kg/mol"],
+        correcta: 1,
+        explicacion: "La molalidad se expresa en moles de soluto por kilogramo de solvente.",
+        errores: [
+            "mol/L corresponde a la molaridad.",
+            "Correcto: la unidad es mol/kg.",
+            "g/L representa una concentración masa-volumen.",
+            "kg/mol no es la unidad de molalidad."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Molalidad",
+        pregunta: "Una solución contiene 2 moles de soluto en 4 kg de solvente. ¿Cuál es su molalidad?",
+        opciones: ["0,5 mol/kg", "2 mol/kg", "4 mol/kg", "8 mol/kg"],
+        correcta: 0,
+        explicacion: "Se dividen los moles de soluto para los kilogramos de solvente: 2/4 = 0,5 mol/kg.",
+        errores: [
+            "Correcto: la molalidad es 0,5 mol/kg.",
+            "Se debe dividir la cantidad de moles para la masa del solvente.",
+            "Este resultado no corresponde a la división.",
+            "Se multiplicaron los valores en lugar de dividirlos."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Fracción molar",
+        pregunta: "¿Qué representa la fracción molar de un componente?",
+        opciones: [
+            "La relación entre sus moles y los moles totales de la mezcla",
+            "La relación entre su masa y el volumen",
+            "Los gramos de soluto por litro",
+            "La temperatura de la solución"
+        ],
+        correcta: 0,
+        explicacion: "La fracción molar se obtiene dividiendo los moles de un componente para los moles totales de la mezcla.",
+        errores: [
+            "Correcto: esa es la definición de fracción molar.",
+            "La fracción molar se calcula con cantidades de sustancia.",
+            "Esa expresión no corresponde a la fracción molar.",
+            "La temperatura no define la fracción molar."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Fracción molar",
+        pregunta: "¿Cuál es la suma de las fracciones molares de todos los componentes de una mezcla?",
+        opciones: ["0", "0,5", "1", "100"],
+        correcta: 2,
+        explicacion: "La suma de todas las fracciones molares de una mezcla es igual a uno.",
+        errores: [
+            "La suma no es cero si existen componentes.",
+            "La suma de todas las fracciones debe ser uno.",
+            "Correcto: la suma es igual a uno.",
+            "La fracción molar se expresa normalmente entre cero y uno."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Fracción molar",
+        pregunta: "Una mezcla tiene 2 moles de A y 3 moles de B. ¿Cuál es la fracción molar de A?",
+        opciones: ["0,2", "0,4", "0,6", "0,8"],
+        correcta: 1,
+        explicacion: "La fracción molar de A es 2/(2+3) = 0,4.",
+        errores: [
+            "El cálculo correcto es 2 dividido para 5.",
+            "Correcto: la fracción molar de A es 0,4.",
+            "0,6 corresponde a la fracción molar de B.",
+            "La suma de las fracciones molares debe ser uno."
+        ]
+    },
+
+    // PROPIEDADES COLIGATIVAS
+
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿De qué depende principalmente el efecto de las propiedades coligativas?",
+        opciones: [
+            "Del número de partículas de soluto presentes",
+            "Del color del soluto",
+            "De la forma del recipiente",
+            "Del olor de la solución"
+        ],
+        correcta: 0,
+        explicacion: "Las propiedades coligativas dependen del número de partículas de soluto y no de su identidad química, en soluciones ideales diluidas.",
+        errores: [
+            "Correcto: dependen del número de partículas de soluto.",
+            "El color no determina estas propiedades.",
+            "La forma del recipiente no es el factor principal.",
+            "El olor no determina las propiedades coligativas."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿Qué sucede con la presión de vapor del solvente al agregar un soluto no volátil?",
+        opciones: [
+            "Generalmente disminuye",
+            "Siempre aumenta",
+            "Permanece igual en todos los casos",
+            "Se vuelve cero"
+        ],
+        correcta: 0,
+        explicacion: "Un soluto no volátil disminuye la presión de vapor del solvente en una solución ideal.",
+        errores: [
+            "Correcto: la presión de vapor disminuye.",
+            "La adición de un soluto no volátil no produce ese aumento.",
+            "La presión de vapor cambia al añadir soluto.",
+            "La presión de vapor no necesariamente se vuelve cero."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿Qué ocurre con el punto de ebullición de una solución al agregar un soluto no volátil?",
+        opciones: [
+            "Disminuye",
+            "Aumenta",
+            "Siempre permanece igual",
+            "Se convierte en cero"
+        ],
+        correcta: 1,
+        explicacion: "La elevación del punto de ebullición hace que la solución hierva a una temperatura mayor que el solvente puro.",
+        errores: [
+            "Generalmente el punto de ebullición aumenta.",
+            "Correcto: se produce una elevación ebulloscópica.",
+            "La temperatura de ebullición sí puede cambiar.",
+            "No se convierte en cero."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿Qué sucede con el punto de congelación de una solución al añadir un soluto no volátil?",
+        opciones: [
+            "Aumenta",
+            "Disminuye",
+            "No cambia",
+            "Se duplica"
+        ],
+        correcta: 1,
+        explicacion: "La presencia de soluto provoca un descenso crioscópico, disminuyendo el punto de congelación.",
+        errores: [
+            "El punto de congelación generalmente disminuye.",
+            "Correcto: se produce un descenso crioscópico.",
+            "La adición de soluto modifica esta propiedad.",
+            "No existe una regla de duplicación."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿Qué es la presión osmótica?",
+        opciones: [
+            "La presión necesaria para detener la ósmosis",
+            "La presión del aire sobre un líquido",
+            "La fuerza que produce la evaporación",
+            "La presión de vapor del solvente puro"
+        ],
+        correcta: 0,
+        explicacion: "La presión osmótica es la presión que debe aplicarse para detener el flujo neto de solvente a través de una membrana semipermeable.",
+        errores: [
+            "Correcto: esa es la definición de presión osmótica.",
+            "No corresponde a la presión atmosférica.",
+            "La evaporación es un fenómeno diferente.",
+            "La presión de vapor es otra propiedad."
+        ]
+    },
+    {
+        nivel: "Medio",
+        tema: "Propiedades coligativas",
+        pregunta: "¿Qué fenómeno ocurre cuando el solvente atraviesa una membrana semipermeable hacia una solución más concentrada?",
+        opciones: [
+            "Ósmosis",
+            "Sublimación",
+            "Condensación",
+            "Combustión"
+        ],
+        correcta: 0,
+        explicacion: "La ósmosis es el movimiento neto del solvente a través de una membrana semipermeable hacia la solución de mayor concentración efectiva de solutos.",
+        errores: [
+            "Correcto: ese proceso se denomina ósmosis.",
+            "La sublimación es el paso de sólido a gas.",
+            "La condensación es el paso de gas a líquido.",
+            "La combustión es una reacción química."
+        ]
+    },
+
+
+    // ===== PREGUNTAS ADICIONALES: PRINCIPIANTE =====
+
+    // CONFIGURACIÓN ELECTRÓNICA
+
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuántos electrones puede contener como máximo el subnivel p?",
+        opciones: ["2", "6", "10", "14"],
+        correcta: 1,
+        explicacion: "El subnivel p tiene tres orbitales y cada uno puede contener dos electrones.",
+        errores: [
+            "Dos electrones es la capacidad de un orbital.",
+            "Correcto: el subnivel p admite seis electrones.",
+            "Diez electrones corresponden al subnivel d.",
+            "Catorce electrones corresponden al subnivel f."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuál es la configuración electrónica del carbono (Z=6)?",
+        opciones: ["1s² 2s² 2p²", "1s² 2s² 2p⁶", "1s² 2s¹ 2p³", "1s² 2p⁴"],
+        correcta: 0,
+        explicacion: "El carbono tiene seis electrones distribuidos en 1s² 2s² 2p².",
+        errores: [
+            "Correcto: esta configuración suma seis electrones.",
+            "Esta configuración corresponde a diez electrones.",
+            "No representa la configuración fundamental del carbono.",
+            "No respeta el orden de llenado de los subniveles."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Qué subnivel se llena primero?",
+        opciones: ["2s", "1s", "2p", "3s"],
+        correcta: 1,
+        explicacion: "El subnivel 1s tiene la menor energía y se llena primero.",
+        errores: [
+            "El subnivel 1s se llena antes.",
+            "Correcto: el llenado comienza en 1s.",
+            "El subnivel 2p se llena después de 2s.",
+            "El subnivel 3s se ocupa posteriormente."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuál es la configuración electrónica del nitrógeno (Z=7)?",
+        opciones: ["1s² 2s² 2p³", "1s² 2s² 2p⁵", "1s² 2s¹ 2p⁴", "1s² 2s² 2p⁶"],
+        correcta: 0,
+        explicacion: "El nitrógeno tiene siete electrones: dos en 1s, dos en 2s y tres en 2p.",
+        errores: [
+            "Correcto: la configuración suma siete electrones.",
+            "Esta configuración suma nueve electrones.",
+            "No corresponde a la distribución fundamental del nitrógeno.",
+            "Esta configuración suma diez electrones."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuántos electrones puede contener como máximo el subnivel s?",
+        opciones: ["2", "6", "10", "14"],
+        correcta: 0,
+        explicacion: "El subnivel s contiene un orbital y admite como máximo dos electrones.",
+        errores: [
+            "Correcto: el subnivel s admite dos electrones.",
+            "Seis es la capacidad del subnivel p.",
+            "Diez es la capacidad del subnivel d.",
+            "Catorce es la capacidad del subnivel f."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuál es la configuración electrónica del magnesio (Z=12)?",
+        opciones: ["1s² 2s² 2p⁶ 3s²", "1s² 2s² 2p⁵ 3s³", "1s² 2s² 2p⁶", "1s² 2s² 2p⁶ 3p²"],
+        correcta: 0,
+        explicacion: "El magnesio tiene doce electrones y termina su configuración en 3s².",
+        errores: [
+            "Correcto: esta configuración suma doce electrones.",
+            "El subnivel s no puede contener tres electrones.",
+            "Esta configuración contiene diez electrones.",
+            "El subnivel 3s se llena antes que el 3p."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Qué principio establece que dos electrones de un mismo orbital deben tener espines opuestos?",
+        opciones: ["Principio de Aufbau", "Principio de exclusión de Pauli", "Regla de Hund", "Ley de conservación de la masa"],
+        correcta: 1,
+        explicacion: "El principio de exclusión de Pauli establece que dos electrones de un orbital tienen espines opuestos.",
+        errores: [
+            "Aufbau describe el orden de llenado de los orbitales.",
+            "Correcto: corresponde al principio de exclusión de Pauli.",
+            "La regla de Hund explica cómo se distribuyen electrones en orbitales de igual energía.",
+            "La conservación de la masa trata sobre las reacciones químicas."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Qué establece la regla de Hund?",
+        opciones: ["Los orbitales de igual energía se ocupan primero con electrones desapareados", "Todos los electrones tienen el mismo espín", "El subnivel s admite seis electrones", "Los electrones ocupan primero el nivel más externo"],
+        correcta: 0,
+        explicacion: "La regla de Hund indica que los orbitales de igual energía se ocupan individualmente antes de aparear electrones.",
+        errores: [
+            "Correcto: primero se ocupan individualmente los orbitales equivalentes.",
+            "Los electrones desapareados tienen espines paralelos, pero no todos los electrones del átomo.",
+            "El subnivel s admite como máximo dos electrones.",
+            "Los electrones ocupan primero los orbitales de menor energía."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuál es la configuración electrónica del aluminio (Z=13)?",
+        opciones: ["1s² 2s² 2p⁶ 3s² 3p¹", "1s² 2s² 2p⁶ 3s³", "1s² 2s² 2p⁵ 3s² 3p²", "1s² 2s² 2p⁶ 3s²"],
+        correcta: 0,
+        explicacion: "El aluminio tiene trece electrones y su configuración termina en 3p¹.",
+        errores: [
+            "Correcto: la configuración suma trece electrones.",
+            "El subnivel 3s no admite tres electrones.",
+            "Esta distribución no corresponde al aluminio.",
+            "Esta configuración contiene doce electrones."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Qué representa el número que aparece antes de la letra de un subnivel, como el 3 en 3p?",
+        opciones: ["El número de protones", "El nivel principal de energía", "La cantidad de orbitales", "La masa atómica"],
+        correcta: 1,
+        explicacion: "El número indica el nivel principal de energía donde se encuentra el electrón.",
+        errores: [
+            "Los protones se identifican mediante el número atómico.",
+            "Correcto: indica el nivel principal de energía.",
+            "La letra y el tipo de subnivel permiten identificar los orbitales.",
+            "La masa atómica no se representa con ese número."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuál es la configuración electrónica del cloro (Z=17)?",
+        opciones: ["1s² 2s² 2p⁶ 3s² 3p⁵", "1s² 2s² 2p⁶ 3s² 3p³", "1s² 2s² 2p⁶ 3s² 3p⁶", "1s² 2s² 2p⁵ 3s² 3p⁶"],
+        correcta: 0,
+        explicacion: "El cloro tiene diecisiete electrones y termina en 3p⁵.",
+        errores: [
+            "Correcto: esta configuración suma diecisiete electrones.",
+            "Esta configuración suma quince electrones.",
+            "Esta configuración corresponde a dieciocho electrones.",
+            "No sigue el orden correcto de llenado."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Configuración electrónica",
+        pregunta: "¿Cuántos electrones tiene el calcio (Z=20) en su último nivel de energía?",
+        opciones: ["1", "2", "8", "20"],
+        correcta: 1,
+        explicacion: "El calcio termina en 4s², por lo que tiene dos electrones en su último nivel.",
+        errores: [
+            "El calcio tiene dos electrones de valencia.",
+            "Correcto: su último nivel contiene dos electrones.",
+            "Ocho es la cantidad de electrones en niveles internos agrupados, no en el último nivel.",
+            "Veinte es el total de electrones del calcio neutro."
+        ]
+    },
+
+    // TABLA PERIÓDICA Y PROPIEDADES PERIÓDICAS
+
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Cómo se llaman las filas horizontales de la tabla periódica?",
+        opciones: ["Grupos", "Períodos", "Familias", "Bloques"],
+        correcta: 1,
+        explicacion: "Las filas horizontales de la tabla periódica se llaman períodos.",
+        errores: [
+            "Los grupos son las columnas verticales.",
+            "Correcto: las filas horizontales son los períodos.",
+            "Las familias suelen referirse a grupos de elementos.",
+            "Los bloques se relacionan con los subniveles electrónicos."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Cómo se llaman las columnas verticales de la tabla periódica?",
+        opciones: ["Períodos", "Grupos", "Filas", "Niveles"],
+        correcta: 1,
+        explicacion: "Las columnas verticales se denominan grupos o familias.",
+        errores: [
+            "Los períodos son las filas horizontales.",
+            "Correcto: las columnas son los grupos.",
+            "Las filas son horizontales.",
+            "Los niveles se relacionan con la energía de los electrones."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿En qué grupo se encuentran los halógenos?",
+        opciones: ["Grupo 1", "Grupo 2", "Grupo 17", "Grupo 18"],
+        correcta: 2,
+        explicacion: "Los halógenos pertenecen al grupo 17 de la tabla periódica.",
+        errores: [
+            "El grupo 1 contiene los metales alcalinos.",
+            "El grupo 2 contiene los metales alcalinotérreos.",
+            "Correcto: los halógenos están en el grupo 17.",
+            "El grupo 18 contiene los gases nobles."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué elementos se encuentran principalmente en la parte izquierda de la tabla periódica?",
+        opciones: ["Metales", "Gases nobles", "No metales", "Halógenos"],
+        correcta: 0,
+        explicacion: "La mayoría de los elementos situados a la izquierda son metales.",
+        errores: [
+            "Correcto: los metales predominan en la parte izquierda.",
+            "Los gases nobles se ubican en el grupo 18.",
+            "Muchos no metales se encuentran a la derecha.",
+            "Los halógenos están en el grupo 17."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué elemento químico tiene el símbolo Fe?",
+        opciones: ["Flúor", "Hierro", "Fósforo", "Francio"],
+        correcta: 1,
+        explicacion: "Fe es el símbolo químico del hierro.",
+        errores: [
+            "El símbolo del flúor es F.",
+            "Correcto: Fe representa al hierro.",
+            "El fósforo tiene el símbolo P.",
+            "El francio tiene el símbolo Fr."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué elemento tiene el símbolo químico Na?",
+        opciones: ["Nitrógeno", "Neón", "Sodio", "Níquel"],
+        correcta: 2,
+        explicacion: "Na es el símbolo químico del sodio.",
+        errores: [
+            "El nitrógeno tiene el símbolo N.",
+            "El neón tiene el símbolo Ne.",
+            "Correcto: Na representa al sodio.",
+            "El níquel tiene el símbolo Ni."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué sucede generalmente con el radio atómico de izquierda a derecha en un período?",
+        opciones: ["Aumenta", "Disminuye", "Permanece siempre igual", "Se duplica"],
+        correcta: 1,
+        explicacion: "Generalmente disminuye porque aumenta la atracción del núcleo sobre los electrones.",
+        errores: [
+            "La tendencia general es que disminuya.",
+            "Correcto: el radio atómico suele disminuir en un período.",
+            "El radio atómico presenta variaciones periódicas.",
+            "No existe una regla de duplicación."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué grupo contiene los metales alcalinotérreos?",
+        opciones: ["Grupo 1", "Grupo 2", "Grupo 17", "Grupo 18"],
+        correcta: 1,
+        explicacion: "Los metales alcalinotérreos pertenecen al grupo 2.",
+        errores: [
+            "El grupo 1 contiene los metales alcalinos.",
+            "Correcto: el grupo 2 corresponde a los alcalinotérreos.",
+            "El grupo 17 contiene los halógenos.",
+            "El grupo 18 contiene los gases nobles."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Cuál de estos elementos es un gas noble?",
+        opciones: ["Oxígeno", "Cloro", "Argón", "Sodio"],
+        correcta: 2,
+        explicacion: "El argón pertenece al grupo 18 y es un gas noble.",
+        errores: [
+            "El oxígeno es un no metal del grupo 16.",
+            "El cloro es un halógeno.",
+            "Correcto: el argón es un gas noble.",
+            "El sodio es un metal alcalino."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué propiedad mide la tendencia de un átomo a atraer electrones cuando forma un enlace?",
+        opciones: ["Densidad", "Electronegatividad", "Volumen", "Masa atómica"],
+        correcta: 1,
+        explicacion: "La electronegatividad expresa la capacidad de un átomo para atraer electrones en un enlace químico.",
+        errores: [
+            "La densidad relaciona masa y volumen.",
+            "Correcto: esa propiedad es la electronegatividad.",
+            "El volumen mide el espacio ocupado.",
+            "La masa atómica se relaciona con la masa de sus átomos."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Cuál de estos elementos es un no metal?",
+        opciones: ["Hierro", "Calcio", "Azufre", "Potasio"],
+        correcta: 2,
+        explicacion: "El azufre es un no metal ubicado en el grupo 16.",
+        errores: [
+            "El hierro es un metal de transición.",
+            "El calcio es un metal alcalinotérreo.",
+            "Correcto: el azufre es un no metal.",
+            "El potasio es un metal alcalino."
+        ]
+    },
+    {
+        nivel: "Principiante",
+        tema: "Tabla periódica",
+        pregunta: "¿Qué tendencia presenta generalmente el carácter metálico al bajar en un grupo?",
+        opciones: ["Aumenta", "Disminuye", "Desaparece", "No presenta ninguna tendencia"],
+        correcta: 0,
+        explicacion: "El carácter metálico generalmente aumenta al bajar en un grupo.",
+        errores: [
+            "Correcto: aumenta al descender en un grupo.",
+            "La tendencia general es de aumento.",
+            "Los elementos no pierden su clasificación por bajar en un grupo.",
+            "Sí existe una tendencia periódica."
+        ]
+    }
 ];
 
 // ==========================================
-// FIN DEL BANCO DE 25 PREGUNTAS
+// FIN DEL BANCO DE 70 PREGUNTAS
+
+console.log("Preguntas cargadas:", preguntas.length);
 // ==========================================
 
 console.log("Preguntas cargadas:", preguntas.length);
