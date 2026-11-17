@@ -1194,13 +1194,13 @@ function seleccionarPreguntasCompetencia(codigo) {
     principiantes = mezclarConCodigo(principiantes, codigo);
     medios = mezclarConCodigo(medios, codigo);
 
-    // Elegir 8 principiantes y 7 medios
-    let seleccionadas = [
-        ...principiantes.slice(0, 8),
-        ...medios.slice(0, 7)
-    ];
+    // Seleccionar todas las preguntas de ambos niveles
+   let seleccionadas = [
+    ...principiantes,
+    ...medios
+];
 
-    // Mezclar las 15 preguntas con el mismo código
+    // Mezclar todas las preguntas con el mismo código
     preguntasJuego = mezclarConCodigo(seleccionadas, codigo + "ORDEN");
 
     nivelSeleccionado = "Mixto";
