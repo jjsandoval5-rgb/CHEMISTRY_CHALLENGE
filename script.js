@@ -1161,6 +1161,7 @@ function iniciarJuego() {
     cambiarPantalla("pantalla-niveles");
 }
 
+
 function seleccionarNivel(nivel) {
 
     nivelSeleccionado = nivel;
@@ -1169,12 +1170,16 @@ function seleccionarNivel(nivel) {
         p.nivel.toLowerCase() === nivel.toLowerCase()
     );
 
+    console.log("Nivel seleccionado:", nivel);
+    console.log("Preguntas encontradas:", preguntasJuego.length);
+
     preguntaActual = 0;
     puntuacion = 0;
     tiempoInicio = Date.now();
 
     mostrarPregunta();
 }
+
 function seleccionarPreguntasCompetencia(codigo) {
 
     let principiantes = preguntas.filter(p =>
